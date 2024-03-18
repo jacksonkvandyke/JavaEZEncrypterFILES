@@ -121,7 +121,7 @@ class HomePage {
         infoButton.setMargin(new Insets(15, 74, 15, 74));
         infoButton.addActionListener(new ActionListener() { 
             public void actionPerformed(ActionEvent e){
-                String fullPath = System.getProperty("user.dir") + "/RawFiles/InfoPage.html";
+                String fullPath = System.getProperty("user.dir") + "/InfoPage.html";
                 System.out.print(fullPath);
                 File infoPage = new File(fullPath);
                 try {
