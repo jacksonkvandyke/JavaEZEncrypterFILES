@@ -1,5 +1,3 @@
-package RawFiles;
-
 import java.awt.Container;
 import java.awt.Font;
 import java.awt.Label;
@@ -11,10 +9,10 @@ import javax.swing.JLabel;
 
 public class RenderHandler {
     //This class handles communication between the Render and Encryption/Decryption files
-    Render render = null;
+    MainRender render = null;
     File currentFile = new File("");
 
-    RenderHandler(Render render){
+    RenderHandler(MainRender render){
         this.render = render;
     }
 

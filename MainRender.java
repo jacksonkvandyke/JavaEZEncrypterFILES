@@ -1,5 +1,3 @@
-package RawFiles;
-
 import java.awt.Color;
 import java.awt.Container;
 import java.awt.Desktop;
@@ -13,14 +11,14 @@ import java.io.IOException;
 import javax.swing.*;
 
 //Controls the rendering of all UI
-public class Render {
+public class MainRender {
 
     JFrame frames[] = new JFrame[4];
     JFrame currentFrame = null;
+    RenderHandler handler = null;
 
-    RenderHandler handler = new RenderHandler(this);
-
-    Render(){
+    MainRender(){
+        this.handler = new RenderHandler(this);
         CreateUI();
         Navigate(frames[0]);
     }
@@ -44,17 +42,17 @@ public class Render {
     }
 
     public static void main(String[] args){
-        new Render();
+        new MainRender();
     }
 
 }
 
 class HomePage {
 
-    Render parent = null;
+    MainRender parent = null;
     JFrame frame = null;
 
-    HomePage(Render parent){
+    HomePage(MainRender parent){
         this.parent = parent;
 
         //Create frame
@@ -144,10 +142,10 @@ class HomePage {
 
 class ChooseMethodPage {
 
-    Render parent = null;
+    MainRender parent = null;
     JFrame frame = null;
 
-    ChooseMethodPage(Render parent){
+    ChooseMethodPage(MainRender parent){
         this.parent = parent;
 
         //Create frame
@@ -219,10 +217,10 @@ class ChooseMethodPage {
 
 class EncryptPage {
 
-    Render parent = null;
+    MainRender parent = null;
     JFrame frame = null;
 
-    EncryptPage(Render parent){
+    EncryptPage(MainRender parent){
         //Create frame
         this.parent = parent;
         this.frame = new JFrame();
@@ -289,10 +287,10 @@ class EncryptPage {
 
 class DecryptPage {
 
-    Render parent = null;
+    MainRender parent = null;
     JFrame frame = null;
 
-    DecryptPage(Render parent){
+    DecryptPage(MainRender parent){
         //Create frame
         this.parent = parent;
         this.frame = new JFrame();
